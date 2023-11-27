@@ -142,7 +142,7 @@ public class ASDI implements Parser{
                 else{
                     hayErrores = true;
                     i++;
-                    System.out.println("Error en el "+i+" token"+a.tipo);
+                    System.out.println("Error en el "+i+" token de tipo "+a.tipo);
                     pila.clear();
                 }
              }
