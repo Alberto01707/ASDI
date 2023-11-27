@@ -108,6 +108,9 @@ public class ASDI implements Parser{
                     pila.push("id");
                     pila.push(".");
                 }
+                else if(a.tipo == TipoToken.COMA && valorTope.equals("A3")){
+                    pila.pop();
+                }
                 else if(a.tipo == TipoToken.FROM && valorTope.equals("A3")){
                     pila.pop();
                 }
@@ -141,8 +144,8 @@ public class ASDI implements Parser{
                 }
                 else{
                     hayErrores = true;
-                    i++;
-                    System.out.println("Error en el "+i+" token de tipo "+a.tipo);
+                    //i++;
+                    //System.out.println("Error en el "+i+" token tipo "+a.tipo+" Valor del Tope "+valorTope);
                     pila.clear();
                 }
              }
